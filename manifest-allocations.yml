@@ -6,6 +6,7 @@ applications:
   routes:
   - route: allocations-pal-beta.cfapps.io
   path: Applications/AllocationsServer/bin/Release/netcoreapp2.2/publish
+  buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack/releases/download/v2.3.2/dotnet-core-buildpack-cflinuxfs3-v2.3.2.zip
   env:
     REGISTRATION_SERVER_ENDPOINT: http://registration-pal-beta.cfapps.io/
   services:
