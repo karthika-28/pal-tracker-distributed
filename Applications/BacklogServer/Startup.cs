@@ -49,7 +49,8 @@ namespace BacklogServer
                 return new ProjectClient(httpClient, logger);
               });
 
-             services.AddHystrixMetricsStream(Configuration);
+            services.AddHystrixMetricsStream(Configuration);
+
         
             services.AddDiscoveryClient(Configuration);
     
