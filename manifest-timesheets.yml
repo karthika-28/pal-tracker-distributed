@@ -7,7 +7,10 @@ applications:
   - route: timesheets-pal-beta.cfapps.io
   path: Applications/TimesheetsServer/bin/Release/netcoreapp2.2/publish
   buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack/releases/download/v2.3.2/dotnet-core-buildpack-cflinuxfs3-v2.3.2.zip
+  env:
+    GRANT_TYPE: client_credentials
   services:
   - tracker-timesheets-database
   - tracker-service-registry
   - tracker-amqp
+  - tracker-sso

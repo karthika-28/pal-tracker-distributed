@@ -7,6 +7,9 @@ applications:
   - route: registration-pal-beta.cfapps.io
   path: Applications/RegistrationServer/bin/Release/netcoreapp2.2/publish
   buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack/releases/download/v2.3.2/dotnet-core-buildpack-cflinuxfs3-v2.3.2.zip
+  env:
+    GRANT_TYPE: client_credentials
   services:
   - tracker-registration-database
   - tracker-service-registry
+  - tracker-sso
